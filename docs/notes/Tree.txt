@@ -1,0 +1,118 @@
+Notes on general tree data structures.
+
+// Resources:
+  - mycodeschool series on YouTube
+
+// Notes:
+
+Remember: Data strucutures are just ways we can oriented and organize data in a
+computer..
+
+Introduction to Trees
+
+Linear data structures:
+  - array
+  - linked list
+  - stack
+  - queue
+Data arranged in sequential manner..
+Can have next element or previous element..
+
+How do we decide which data structure to use?
+  - What needs to be stored?
+  - Cost of operations.. 
+  - Memory usage
+  - ease of implementation (may not be the best strategy)
+
+Trees are useful for hirarchal of data..
+Example.. executives of a company (CEO, CTO, President)
+
+View tree as upside down.. root at the top.
+
+Tree data structure definition..
+a collection of entities called nodes linked together to simulate hirarchy..
+Non-linear data strucutre... it is a hirarchal data structure..
+Each node will contain data and links and references to other nodes called
+children.
+
+Root node at the top and branches out to children.. root is the parent.
+
+terms:
+  - root
+  - children
+  - parent
+  - Siblings
+  - Leaf
+
+Children can be parents.
+
+Siblings have the same parents.
+
+Root is the only node without a parent.
+
+Any node that does not have a child is a leaf node.
+
+All non-leaf nodes are internal nodes.
+
+Can have grandchild and grandparents..
+
+Links are not bidirectional..
+
+If we can go from A to B
+A is ancestor of B..
+B is descendent of A..
+
+Common anscestors between two nodes are within the same path to the root.
+
+Cousins are nodes from different parents who share the same parent.
+
+
+
+PROPERTIES
+
+Trees are recursive data structure..
+For each node.. We have root and the link to all subtrees..(branches below the
+root).
+
+Recursion.. reducing something in a self similar manner.
+
+Tree of N nodes have N-1 edges... (edges are incoming links). N-1 because root
+doesn't have incoming link.
+
+Depth of x = length of path from root to x.. number of edges in path from root
+to x.
+
+Height of x = number of edges in longest path from x to a leaf.
+
+So depth from root.
+Height from farthest leaf.
+
+Height and depth of a node may or may not be the same.
+
+
+Categories of tree:
+
+Binary Tree - a tree in which each node can have at most 2 children..
+implemented with dynamically created nodes connected with pointers.
+
+A node: 3 cells.. left to store left child.. middle to store data.. right to
+store right child..
+
+
+A binary node in C/C++
+
+struct Node {
+  int data;
+  Node* left;
+  Node* right;
+}
+
+Applications:
+  - Storing naturally hierarchical data (file systems)
+  - organizing data for quick search, insertion, deletion (Binary Search Trees)
+    - Trie -> dictionary (dynamic spell checking)
+  - Networking routing algorithms
+
+
+
+

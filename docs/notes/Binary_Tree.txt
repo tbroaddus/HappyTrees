@@ -1,0 +1,108 @@
+Notes on Binary Trees
+
+// Resources:
+  mycodeschool series on YouTube
+
+// Notes:
+
+Properties of a binary tree:
+  - each node can have at most 2 children
+
+(nodes can have just 1 child as well.. or none of it is a leaf!)
+
+Each node can have a left and right child.
+
+If they do not have a child, we set the reference to null.
+
+A linked list is technically a binary tree (doesn't have more than one
+children).
+
+A strict/proper binary tree - each node can have either 2 or 0 children.
+
+A complete binary tree - all levels except possibly the last are completely
+filled and all nodes are as left as possible.
+
+Root has depth of 0.. level 0.. its children Level 1..
+Maximum depth of the tree is the height of the tree.
+
+Max number of nodes at level i is 2^i... because each node can have two
+children..
+
+Level 0 - 1
+Level 1 - 2 
+Level 2 - 4 
+Level 3 - 8
+
+
+Perfect binary tree.. all levels are completely filled.. all nodes have two
+children.
+
+Maximum number of nodes in a binary tree with height h.. 2^0 + 2^1 + ... + 2^h.
+= 2^(h+1) - 1
+= 2^(no. of levels) - 1
+
+Height of Perfect Binary tree with N nodes..
+n = 2^(h+1) - 1 turns into..
+h = log2(n+1) - 1
+
+Height of complete binary tree - floor of log2N.. 
+if n = 16.. then height will equal floor of 3.9.. which is 3.
+
+Cost of operations..
+Depends on height of tree.
+Search in binary search tree.. depends on height of tree.
+We want height of tree to be less.. if it is dense. If the tree is close to a
+perfect binary tree.
+Minimum height of tree with N nodes can be log2N when the tree is a complete
+binary tree.
+
+Minimum height can be floor of log2N.. (perfect binary tree). Time of
+operations O(log2N)
+Maximum height can be N-1.. (if each node has one children.. a linked list).
+Time of operations (O(n))
+
+So keep height minimum.. (balanced).
+
+Balanced Binary tree - difference between height of left and right subtree for
+every node is not more than some number k (mostly 1).
+
+Height -> no. of edges in longest path from root to a leaf.
+(not number of nodes in longest path form root to a leaf)
+Height of an empty tree = -1.
+Height of tree with 1 node = 0.
+
+hleft - height of left subtree
+hright - height of right subtree
+Difference of hleft and hright subtrees is  = | hleft - hright | 
+height of a subtree can be -1 also..
+
+
+We can implement binary tree using:
+a) dynamically created nodes (nodes created dynamically in memory and linked
+with pointers).
+b) arrays (used for complete binary trees)
+
+node implementation in C/C++
+
+template<class T>
+struct node {
+  T data;
+  node<T>* left;
+  node<T>* right;
+};
+
+
+arrays for complete binary trees:
+Create an array with size of total number of nodes.. 
+For node at index i,
+  left-child-index = 2i+1;
+  right-child-indx = 2i+2;
+This implementation is used in a special form of binary tree called a heap.
+Arrays are used to implement heaps.
+
+// Next is binary search tree..
+
+
+
+
+

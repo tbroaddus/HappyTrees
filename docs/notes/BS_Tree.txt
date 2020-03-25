@@ -1,0 +1,10 @@
+Notes on Binary Search Trees
+
+Resources:
+  - mycodeschool series on YouTube
+
+
+Notes:
+
+
+
